@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>A Birthday Surprise for Marian Nicole</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+<section id="terminal" class="screen active dark">
+  <div class="terminal-shell">
+    <h1>BIRTHDAY PROTOCOL v6.0</h1>
+    <pre id="terminalText"></pre>
+    <div id="progressWrap" class="hidden"><div id="progressBar"></div><span id="progressLabel">0%</span></div>
+    <button id="openSurprise" class="btn hidden">OPEN SURPRISE 🎁</button>
+  </div>
+</section>
+
+<section id="gift" class="screen pink">
+  <div class="decor">♡</div><div class="decor d2">♡</div>
+  <div id="giftBefore" class="center">
+    <p class="eyebrow">a little something for you ♡</p>
+    <h2>I have a surprise for you...</h2>
+    <p><em>psst... click the gift</em></p>
+    <button id="giftButton" class="gift">🎁</button>
+    <p>made especially for Marian Nicole</p>
+  </div>
+  <div id="giftAfter" class="center hidden">
+    <div id="confetti"></div>
+    <h2 class="huge">HAPPY BIRTHDAY</h2><h2 class="name">MARIAN NICOLE!</h2>
+    <p>Today is your day ♡</p><p>and this little surprise is just getting started...</p>
+    <button id="toLetter" class="btn">CONTINUE →</button>
+  </div>
+</section>
+
+<section id="letter" class="screen pink scroll-screen">
+  <header><div class="heart">♡</div><h2>A LETTER FOR YOU</h2><em>for Marian Nicole ♡</em></header>
+  <article class="paper"><div id="letterText"></div></article>
+  <p id="typingStatus"><em>typing... ♡</em></p>
+  <button id="toVault" class="btn hidden">THERE'S MORE →</button>
+</section>
+
+<section id="vault" class="screen pink scroll-screen">
+  <header><div class="heart">♡</div><h2>MARIAN'S BIRTHDAY VAULT</h2><em>apparently one letter wasn't enough...</em></header>
+  <div class="vault-grid">
+<div class="vault-card" data-i="0">
+<span class="num">01</span><h3>SOMETHING I NOTICED ABOUT YOU</h3>
+<p class="card-status">UNLOCKED</p>
+<button class="card-open" >OPEN ♡</button>
+</div>
+<div class="vault-card" data-i="1">
+<span class="num">02</span><h3>A TINY CONFESSION</h3>
+<p class="card-status">finish the previous message first</p>
+<button class="card-open" disabled>LOCKED</button>
+</div>
+<div class="vault-card" data-i="2">
+<span class="num">03</span><h3>A BIRTHDAY WISH</h3>
+<p class="card-status">finish the previous message first</p>
+<button class="card-open" disabled>LOCKED</button>
+</div>
+<div class="vault-card" data-i="3">
+<span class="num">04</span><h3>ONE LAST THING...</h3>
+<p class="card-status">finish the previous message first</p>
+<button class="card-open" disabled>LOCKED</button>
+</div>
+  </div>
+  <p id="vaultProgress">open message 01 to begin ♡</p>
+  <button id="toCake" class="btn hidden">UNLOCK FINAL SURPRISE →</button>
+</section>
+
+<div id="modal" class="modal hidden"><div class="modal-box"><div class="heart">♡</div><h3 id="modalTitle"></h3><p id="modalMessage"></p><button id="closeModal" class="btn">KEEP THIS MESSAGE ♡</button></div></div>
+
+<section id="cake" class="screen pink">
+  <div class="center cake-center">
+    <p class="eyebrow">♡ ONE LAST SURPRISE ♡</p><h2>for you, Marian Nicole</h2>
+    <div class="cake-art"><div class="flames">🔥 🔥 🔥 🔥</div><div class="cake-top"></div><div class="cake-bottom">NICS ♡</div></div>
+    <p id="wish"><em>make a wish...</em></p>
+    <button id="blow" class="btn">BLOW THE CANDLES ♡</button>
+    <p id="afterWish"></p>
+    <button id="toFinal" class="btn hidden">ONE LAST THING... →</button>
+  </div>
+</section>
+
+<section id="final" class="screen dark scroll-screen">
+  <header><div class="heart">♡</div><h2>BIRTHDAY PROTOCOL</h2><small>final sequence</small></header>
+  <pre id="finalText" class="final-terminal"></pre>
+  <p id="finalStatus">completing surprise...</p>
+  <button id="replay" class="btn hidden">REPLAY SURPRISE ↻</button>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
